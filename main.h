@@ -6,7 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-#define UNUSED(x) (void)()
+#define UNUSED(x) (void)();
 #define BUFF_SIZE 1024
 
 /* FLAGS */
@@ -36,7 +36,7 @@ typedef struct formats
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-va_list list, char buffer[], int flags, int width, int precision, int size);
+va_list list, char buffer[], int flags, int width, int precision, int size;
 
 /****************** FUNCTIONS ******************/
 
