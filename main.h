@@ -4,11 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-<<<<<<< HEAD
-#define UNUSED(x) (void)()
-=======
 #define UNUSED(x) (void)(x)
->>>>>>> ec93ef73cad8c2fcdd663305a9dc93c21fab6cb0
 #define BUFF_SIZE 1024
 
 /* FLAGS */
@@ -44,12 +40,8 @@ struct fmt
 typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-<<<<<<< HEAD
-va_list list, char buffer[], int flags, int width, int precision, int size;
-=======
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
->>>>>>> ec93ef73cad8c2fcdd663305a9dc93c21fab6cb0
 
 /****************** FUNCTIONS ******************/
 
