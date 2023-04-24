@@ -1,12 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include <unistd.h>
 
-#define UNUSED(x) (void)();
+<<<<<<< HEAD
+#define UNUSED(x) (void)()
+=======
+#define UNUSED(x) (void)(x)
+>>>>>>> ec93ef73cad8c2fcdd663305a9dc93c21fab6cb0
 #define BUFF_SIZE 1024
 
 /* FLAGS */
@@ -26,17 +28,28 @@
  * @fmt: The format.
  * @fn: The function associated.
  */
-
-typedef struct formats
+struct fmt
 {
-	char *formats;
-	int (*fn)(va_list, char[], int, int, int);
-} format_type;
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
+};
 
 
-int _putchar(char c);
+/**
+ * typedef struct fmt fmt_t - Struct op
+ *
+ * @fmt: The format.
+ * @fm_t: The function associated.
+ */
+typedef struct fmt fmt_t;
+
 int _printf(const char *format, ...);
+<<<<<<< HEAD
 va_list list, char buffer[], int flags, int width, int precision, int size;
+=======
+int handle_print(const char *fmt, int *i,
+va_list list, char buffer[], int flags, int width, int precision, int size);
+>>>>>>> ec93ef73cad8c2fcdd663305a9dc93c21fab6cb0
 
 /****************** FUNCTIONS ******************/
 
